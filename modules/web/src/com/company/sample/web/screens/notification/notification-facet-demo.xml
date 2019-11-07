@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.sample.web.screens.notification">
+    <actions>
+        <action id="notificationAction"/>
+    </actions>
+    <facets>
+        <notification id="notification"
+                      caption="msg://notificationFacet"
+                      description="msg://facetDemo"
+                      onAction="notificationAction"
+                      type="TRAY"/>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <button id="notificationExplicit"
+                    caption="Show notification (invoke show)"/>
+            <button id="notificationActionBtn"
+                    action="notificationAction"
+                    caption="Show notification (action sub)"/>
+        </hbox>
+    </layout>
+</window>

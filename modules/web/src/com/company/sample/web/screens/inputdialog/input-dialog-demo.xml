@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.sample.web.screens.inputdialog">
+    <actions>
+        <action id="dialogAction"/>
+    </actions>
+    <facets>
+        <inputDialog id="inputDialogFacet"
+                     caption="msg://inputDialog"
+                     onAction="dialogAction">
+            <parameters>
+                <booleanParameter id="boolParam"
+                                  caption="msg://boolParam"
+                                  defaultValue="true"
+                                  required="true"/>
+                <intParameter id="intParam"
+                              caption="msg://intParam"
+                              required="true"/>
+                <entityParameter id="userParam"
+                                 caption="msg://userParam"
+                                 entityClass="com.haulmont.cuba.security.entity.User"
+                                 required="true"/>
+            </parameters>
+        </inputDialog>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <button id="dialogButton"
+                    caption="Show InputDialog (invoke show)"/>
+            <button id="dialogActionButton"
+                    action="dialogAction"
+                    caption="Show InputDialog (action sub)"/>
+        </hbox>
+    </layout>
+</window>

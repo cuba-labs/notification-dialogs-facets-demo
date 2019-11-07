@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.sample.web.screens.optiondialog">
+    <actions>
+        <action id="dialogAction"/>
+    </actions>
+    <facets>
+        <optionDialog id="optionDialog"
+                      caption="msg://optionDialogCaption"
+                      message="msg://optionDialogMsg"
+                      modal="true"
+                      onAction="dialogAction">
+            <actions>
+                <action id="ok"
+                        caption="msg://optDialogOk"
+                        icon="CHECK"
+                        primary="true"/>
+                <action id="cancel"
+                        caption="msg://optDialogCancel"
+                        icon="BAN"/>
+            </actions>
+        </optionDialog>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <button id="explicitDialogShowBtn"
+                    caption="Show OptDialog (invoke show)"/>
+            <button id="actionDialogBtn"
+                    action="dialogAction"
+                    caption="Show OptDialog (action sub)"/>
+        </hbox>
+    </layout>
+</window>

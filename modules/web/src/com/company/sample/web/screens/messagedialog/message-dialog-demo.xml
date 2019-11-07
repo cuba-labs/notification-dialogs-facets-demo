@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="com.company.sample.web.screens.messagedialog">
+    <actions>
+        <action id="dialogAction"/>
+    </actions>
+    <facets>
+        <messageDialog id="messageDialog"
+                       caption="msg://msgDialogFacet"
+                       message="msg://msgDialogDemo"
+                       modal="true"
+                       closeOnClickOutside="true"
+                       onAction="dialogAction"/>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <button id="explicitDialogShow"
+                    caption="Show Msg Dialog (invoke show)"/>
+            <button id="actionDialogBtn"
+                    action="dialogAction"
+                    caption="Show Msg Dialog (action sub)"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-sample" insertBefore="administration">
+        <item screen="sample_NotificationFacetDemo"/>
+        <item screen="sample_MessageDialogDemo"/>
+        <item screen="sample_OptionDialogDemo"/>
+        <item screen="sample_InputDialogDemo"/>
+    </menu>
+</menu-config>
